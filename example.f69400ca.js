@@ -34351,12 +34351,19 @@ var _default = (0, _react.memo)(function (_a) {
 });
 
 exports.default = _default;
-},{"tslib":"../node_modules/tslib/tslib.es6.js","react":"../node_modules/react/index.js","goober":"../node_modules/goober/dist/goober.module.js","./constant":"../src/constant.ts"}],"../src/index.tsx":[function(require,module,exports) {
+},{"tslib":"../node_modules/tslib/tslib.es6.js","react":"../node_modules/react/index.js","goober":"../node_modules/goober/dist/goober.module.js","./constant":"../src/constant.ts"}],"../src/type.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+},{}],"../src/index.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _exportNames = {};
 exports.default = void 0;
 
 var _tslib = require("tslib");
@@ -34375,6 +34382,20 @@ var _child = _interopRequireDefault(require("./child"));
 
 var _pointer = _interopRequireDefault(require("./pointer"));
 
+var _type = require("./type");
+
+Object.keys(_type).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  if (key in exports && exports[key] === _type[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _type[key];
+    }
+  });
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -34382,7 +34403,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 (0, _goober.setup)(_react.createElement);
-var Container = (0, _goober.styled)('div')(templateObject_1 || (templateObject_1 = (0, _tslib.__makeTemplateObject)(["\n  width: 100%;\n  height: 100%;\n  position: relative;\n  transform:translate(0, 0);\n"], ["\n  width: 100%;\n  height: 100%;\n  position: relative;\n  transform:translate(0, 0);\n" // todo clean any
+var Container = (0, _goober.styled)('div')(templateObject_1 || (templateObject_1 = (0, _tslib.__makeTemplateObject)(["\n  width: 100%;\n  height: 100%;\n  position: relative;\n  transform: translate(0, 0);\n"], ["\n  width: 100%;\n  height: 100%;\n  position: relative;\n  transform: translate(0, 0);\n" // todo clean any
 ]))); // todo clean any
 
 var MiniMap = (0, _goober.styled)('div', _react.forwardRef)(function (_a) {
@@ -34521,7 +34542,7 @@ var _default = (0, _react.memo)(TinyMap);
 
 exports.default = _default;
 var templateObject_1, templateObject_2;
-},{"tslib":"../node_modules/tslib/tslib.es6.js","react":"../node_modules/react/index.js","goober":"../node_modules/goober/dist/goober.module.js","./util":"../src/util.ts","./constant":"../src/constant.ts","./dom":"../src/dom.ts","./child":"../src/child.tsx","./pointer":"../src/pointer.tsx"}],"node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"tslib":"../node_modules/tslib/tslib.es6.js","react":"../node_modules/react/index.js","goober":"../node_modules/goober/dist/goober.module.js","./util":"../src/util.ts","./constant":"../src/constant.ts","./dom":"../src/dom.ts","./child":"../src/child.tsx","./pointer":"../src/pointer.tsx","./type":"../src/type.ts"}],"node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -34984,7 +35005,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54981" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55854" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
