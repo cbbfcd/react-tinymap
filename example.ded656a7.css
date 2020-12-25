@@ -1,0 +1,2 @@
+.container{position:absolute;width:100vw;height:calc(100vh - 120px)}.box{width:200px;padding:10px 0;text-align:center}body{margin:0}.header{height:120px;background-color:#1e90ff;display:flex;align-items:center;justify-content:center}.header>h1{color:#fff}.header>.operation{font-size:14px;color:#fff;margin-left:60px}.header>.operation,.oper-item{display:flex;align-items:center}.oper-item{margin-left:20px}.oper-item>label{margin-right:8px}
+/*# sourceMappingURL=https://cbbfcd.github.io/react-tinymap/example.ded656a7.css.map */
