@@ -1,0 +1,77 @@
+{
+  "version": "0.8.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "keywords": [
+    "react-minimap",
+    "minimap",
+    "drag",
+    "drop"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "predeploy": "npm run build && cd example && npm run build",
+    "deploy": "gh-pages -d ./example/dist"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "peerDependencies": {
+    "react": ">=16.11.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "react-tinymap",
+  "author": "波比小金刚",
+  "module": "dist/react-tinymap.esm.js",
+  "description": "a mini map via react hooks",
+  "size-limit": [
+    {
+      "path": "dist/react-tinymap.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/react-tinymap.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.9.1",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "gh-pages": "^3.1.0",
+    "husky": "^4.3.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "size-limit": "^4.9.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "goober": "^2.0.16"
+  }
+}
