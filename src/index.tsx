@@ -77,10 +77,10 @@ const TinyMap: FC<TinyMapProps> = ({
     updateStore(prev => ({ ...prev, ...{ pointer }}))
   })
 
-  const down = useCallback((e: SyntheticEvent) => {
+  const down = (e: SyntheticEvent) => {
     dragStart.current = true
     centerRef.current = center(e.target as any, store.pointer)
-  }, [])
+  }
 
   const up = useCallback(() => {
     dragStart.current = false
